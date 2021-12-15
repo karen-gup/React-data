@@ -1,16 +1,31 @@
 import { useNavigate } from "react-router-dom"
+import './styles/data.scss'
+import {Characters} from "./Characters"
 
-export function Data () {
+export function Data() {
 
-    const navigate= useNavigate();
-    const handleRoute= () => {
+    const navigate = useNavigate();
+    const handleRoute = () => {
         navigate('/ruta')
     }
 
     return (
-        <div>
-            <h1> SOY EL COMPONENTE DATA</h1>
+        <body>
+            <section>
+            <input placeholder="SEARCH" />
             <button onClick={handleRoute}>Main</button>
-        </div>
+            <br />
+            <select>
+                <option>STATUS</option>
+            </select>
+            <select>
+                <option>SPECIES</option>
+            </select>
+            <select>
+                <option>SORTER</option>
+            </select>
+            </section>
+                <Characters/>
+        </body>
     )
 }
