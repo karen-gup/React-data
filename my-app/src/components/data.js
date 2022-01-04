@@ -1,31 +1,37 @@
-import { useNavigate } from "react-router-dom"
+import { useEffect, useState } from "react";
+import { Banner } from "./Banner";
+import { GridCards } from "./Cards"
+import { Nav } from './nav'
+import { Search } from "./Search";
 import './styles/data.scss'
-import {Characters} from "./Characters"
 
 export function Data() {
 
-    const navigate = useNavigate();
-    const handleRoute = () => {
-        navigate('/ruta')
-    }
+    const [character, setCharacter] = useState([])
+    const initialUrl = 'https://rickandmortyapi.com/api/character';
+    
+
+
+    const getData = (api) => {
+        fetch(api)
+            .then(response => response.json())
+            .then(data => setCharacter(data.results))
+            .catch(error => console.log(error))
+    };
+    useEffect(() => {
+        getData(initialUrl)
+    }, [])
+
+
 
     return (
-        <body>
-            <section>
-            <input placeholder="SEARCH" />
-            <button onClick={handleRoute}>Main</button>
-            <br />
-            <select>
-                <option>STATUS</option>
-            </select>
-            <select>
-                <option>SPECIES</option>
-            </select>
-            <select>
-                <option>SORTER</option>
-            </select>
-            </section>
-                <Characters/>
-        </body>
+        <div>
+            <Banner/>
+          <section>
+            <Search/>
+            <Nav />
+          </section>
+            <GridCards character={character}/>
+        </div>
     )
 }
