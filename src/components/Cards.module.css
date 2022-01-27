@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap');
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around
+}
+.card{
+    display:flex;
+    align-items: center;
+    width: 600px;
+    height: 230px;
+    font-family: 'Ubuntu', sans-serif;
+    border: 3px solid #D5EE3E;
+    border-radius: 15px;
+    background: #2A2B27;
+    color: #28D3DE;
+    margin: 10px;
+}
+.img {
+    width: 230px;
+    height: 230px;
+    border-radius: 11px 0px 0px 11px;
+}
+.info {
+    margin-left: 2em;
+    font-size: 20px;
+}
