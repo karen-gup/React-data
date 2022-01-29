@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
+    margin-top: 5px;
 }
 
 .search{
@@ -31,4 +32,20 @@
 .seeker{
     height: 35px;
     width: 35px;
+}
+
+@media (max-width:550px) {
+    .buttonSearch{
+        width: 70px;
+        height: 38px;
+    }
+    .seeker {
+        width: 30px;
+        height: 30px;
+    }
+    .search{
+        width: 220px;
+        height: 30px;
+        font-size: 20px;
+    }
 }

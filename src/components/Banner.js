@@ -1,3 +1,4 @@
+import styles from "./Cards.module.css"
 import title from "./images/banner.png"
 export function Banner () {
     const divStyle = {
@@ -8,7 +9,7 @@ export function Banner () {
 
     return (
         <header width={100} style={divStyle}>
-            <img src={title} alt="Rick and Morty"/>
+            <img src={title} alt="Rick and Morty" className={styles.logo}/>
         </header>
     )
 }

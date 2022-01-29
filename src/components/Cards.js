@@ -12,7 +12,8 @@ export function GridCards ({character }) {
                     </div>
                     <div className={styles.info}>
                         <h2> {chart.name.toUpperCase()}</h2>
-                        <p>{chart.status}-{chart.species}</p>
+                        <p> <span className="status"> </span>
+                            {chart.status} - {chart.species}</p>
                         <p>Gender: {chart.gender}</p>
                         <p>Origin: {chart.origin.name}</p>
                         <p>Location: {chart.location.name}</p>

@@ -8,7 +8,7 @@ import './styles/data.scss'
 
 export function Data() {
     const [character, setCharacter] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
+    //const [isLoading, setIsLoading] = useState(true);
     const [page, setPage] = useState(1);
    // const [hasMore, setHasMore] = useState(true);
     const initialUrl = 'https://rickandmortyapi.com/api/character/?page='+ page;
@@ -20,10 +20,12 @@ export function Data() {
             .catch(error => console.log(error))
     };
     useEffect(() => {
-        setIsLoading(true);
+        
         getData(initialUrl)
-    }, [page])
+    }, [initialUrl])
     
+    console.log(character)
+
     return (
         <div>
             <Banner/>
