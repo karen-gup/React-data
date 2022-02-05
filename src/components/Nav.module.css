@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap');
+
+.filtersContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 2rem;
+}
+
+.filter{
+    width: 15em;
+    height: 3rem;
+    border: 4px solid #28D3DE;
+    border-radius: 10px;
+    background: rgba(213, 238, 62, 0.9);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: #444747;
+    margin: 1%;
+}
+
+@media (max-width:850px) {
+    .filter{
+        font-size: 20px;
+        height: 2.5rem;
+    }
+}
