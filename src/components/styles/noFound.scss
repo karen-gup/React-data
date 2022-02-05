@@ -27,3 +27,13 @@ $color-secundary: #D5EE3E;
     justify-content: space-evenly;
     border-radius: 15px;
 }
+
+@media (max-width: 550px){
+    .img-noFound{
+        width:300px
+    }
+    .conteiner-text{
+        width: 250px;
+        font-size: 18px;
+    }
+}
