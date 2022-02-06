@@ -1,16 +1,15 @@
-import styles from "./Cards.module.css"
-
+import './styles/Cards.scss'
 export function GridCards ({character }) {
 
 
     return (
-        <main className={styles.container}>{
+        <main className="container">{
             character.map(chart => (
-                <article key={chart.id} className={styles.card}>
-                    <div className={styles.img}>
-                        <img src={chart.image} alt="avatar" className={styles.img}/>
+                <article key={chart.id} className="card">
+                    <div className="img">
+                        <img src={chart.image} alt="avatar" className="img"/>
                     </div>
-                    <div className={styles.info}>
+                    <div className="info">
                         <h2> {chart.name.toUpperCase()}</h2>
                         <p> <span className="status"> </span>
                             {chart.status} - {chart.species}</p>

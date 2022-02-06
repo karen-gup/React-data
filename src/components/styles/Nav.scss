@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap');
+$font-all: 'Ubuntu', sans-serif;
+$color-primary: rgba(213, 238, 62, 0.9);
+$color-secundary: #28D3DE;
+$color-tertiary: #444747;
+
+.filtersContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 2rem;
+}
+
+.filter{
+    width: 15em;
+    height: 3rem;
+    border: 4px solid $color-secundary;
+    border-radius: 10px;
+    background: $color-primary;
+    font-family: $font-all;
+    font-size: 25px;
+    font-weight: bold;
+    color: $color-tertiary;
+    margin: 1%;
+}
+
+@media (max-width:850px) {
+    .filter{
+        font-size: 20px;
+        height: 2.5rem;
+    }
+}

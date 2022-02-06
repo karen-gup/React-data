@@ -1,5 +1,6 @@
 import { useState } from "react"
-import styles from "./Search.module.css"
+// import styles from "./Search.module.css"
+import './styles/Search.scss'
 import seekers from "./images/seeker.png"
 
 export function Search () {
@@ -11,13 +12,13 @@ export function Search () {
         console.log('Boton search', search)
     }
     return (
-        <section className={styles.containerSearch} >
-        <div className={styles.contain}>
+        <section className="containerSearch" >
+        <div className="contain">
         <input onChange={(e)=> setSearch(e.target.value)}
-            placeholder="SEARCH" className={styles.search} />
+            placeholder="SEARCH" className="search" />
         <button onClick={handleRoute} 
-            className={styles.buttonSearch}>
-            <img src={seekers} alt="search" className={styles.seeker}/>
+            className="buttonSearch">
+            <img src={seekers} alt="search" className="seeker"/>
         </button>
         </div>
         </section>
