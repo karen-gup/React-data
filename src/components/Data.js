@@ -24,7 +24,7 @@ export function Data() {
         getData(initialUrl)
     }, [initialUrl])
     
-    console.log(character)
+    //console.log(character)
 
     return (
         <div>
