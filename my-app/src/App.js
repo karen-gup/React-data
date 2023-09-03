@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Data } from './components/Data';
+import { Data } from './components/data';
 import { Characters } from './components/Characters';
 
 
